@@ -1,0 +1,20 @@
+<script>
+
+function utf8_to_b64( str ) {
+  return window.btoa(unescape(encodeURIComponent( str )));
+}
+function utf8_to_b641( str ) {
+  return window.btoa(unescape(encodeURIComponent( str )));
+}
+
+function b64_to_utf8( str ) {
+  return decodeURIComponent(escape(window.atob( str )));
+}
+
+// Uso:
+var a1 = utf8_to_b64('camilo'); // "4pyTIMOgIGxhIG1vZGU="
+alert(a1);
+var a2 = b64_to_utf8(a1); // "✓ à la mode"
+alert(a2);
+
+</script>
